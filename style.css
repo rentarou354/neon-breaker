@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --primary-glow-color: #FF00FF;
+    --secondary-glow-color: #00FFFF;
+    --background-color: #0A000A;
+    --text-color: #E0E0E0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    border: 2px solid var(--primary-glow-color);
+    box-shadow: 0 0 15px var(--primary-glow-color), 0 0 25px var(--primary-glow-color) inset;
+}
+
+canvas {
+    display: block;
+    background-color: #000;
+}
+
+#ui-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    pointer-events: none; /* UI doesn't block mouse events for the canvas */
+}
+
+.ui-element {
+    text-align: center;
+}
+
+.ui-element h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--secondary-glow-color);
+    text-shadow: 0 0 5px var(--secondary-glow-color);
+}
+
+.ui-element p {
+    margin: 5px 0 0;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 7px #fff;
+}
+
+#message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    display: none; /* Hidden by default */
+    pointer-events: none;
+}
+
+#message {
+    font-size: 4em;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--primary-glow-color);
+    text-shadow: 0 0 10px var(--primary-glow-color), 0 0 20px #fff;
+}
+
+#sub-message {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--secondary-glow-color);
+}
